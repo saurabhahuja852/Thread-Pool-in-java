@@ -29,7 +29,7 @@ public class ThreadPool {
 
 	public void addTask(Runnable task){
 		synchronized (taskQueue) {
-			System.out.println("Single task added");
+			//System.out.println("Single task added");
 			taskQueue.add(task);
 			taskQueue.notify();
 		}
@@ -41,7 +41,7 @@ public class ThreadPool {
 			for(Runnable task:tasks){
 				taskQueue.add(task);
 			}
-			System.out.println("Multiple task added");
+			//System.out.println("Multiple task added");
 			taskQueue.notifyAll();
 		}
 	}

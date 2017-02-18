@@ -24,7 +24,7 @@ public class WorkerThread extends Thread {
 					 } catch (InterruptedException e) {
 						 
 					}
-					System.out.println("After waing");
+					//System.out.println("After waing");
 					if(!taskQueue.isEmpty()){
 						task =taskQueue.poll();
 					}
