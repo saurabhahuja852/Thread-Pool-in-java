@@ -24,14 +24,15 @@ public class WorkerThread extends Thread {
 					 } catch (InterruptedException e) {
 						 
 					}
+				}
 					//System.out.println("After waing");
-					if(!taskQueue.isEmpty()){
+				if(!taskQueue.isEmpty()){
 						task =taskQueue.poll();
-					}
-				}else{
+				}
+				/*}else{
 					task =taskQueue.poll();
 				}
-				
+				*/
 			}
 		// When runnning a task ,we don't require  lock on task queue  so we write below code after syncronozed block
 			if(task!=null){
